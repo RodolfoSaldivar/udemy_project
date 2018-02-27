@@ -11,7 +11,8 @@ module.exports = (app) =>
 
 	app.get(
 		'/auth/google/callback',
-		passport.authenticate('google')
+		passport.authenticate('google'),
+		(req, res) => { res.redirect('/surveys'); }
 	);
 
 	app.get(
@@ -19,7 +20,7 @@ module.exports = (app) =>
 		(req, res) =>
 		{
 			req.logout();
-			res.send(req.user || "se cerro la sesión");
+			res.redirect('/');
 		}
 	);
 
