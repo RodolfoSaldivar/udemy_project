@@ -34,7 +34,7 @@ export class SurveyForm extends Component
 						Cancel
 					</Link>
 					<button type="submit" className="teal btn-flat white-text right">
-						Nextdvf
+						Next
 						<i className="material-icons right">done</i>
 					</button>
 				</form>
